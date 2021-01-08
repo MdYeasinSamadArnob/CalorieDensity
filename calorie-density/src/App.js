@@ -7,7 +7,9 @@ class App extends Component {
     return (
         <div className="container">
           <h2>Hello World</h2>
-          <FoodList></FoodList>
+          <FoodList daytime="morning" date="03.03.2020"></FoodList>
+          <FoodList daytime="noon" date="03.03.2020"></FoodList>
+          <FoodList daytime="evening" date="05.03.2020"></FoodList>
         </div>
     );
   }

@@ -10,8 +10,8 @@ export default class FoodList extends Component {
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">03.03.2021</th>
-                            <th scope="col" colspan="3">Morning</th>
+                            <th scope="col">{this.props.date}</th>
+                            <th scope="col" colspan="3"> {this.props.daytime}</th>
                         </tr>
                     </thead>
                     <thead>
@@ -58,7 +58,8 @@ export default class FoodList extends Component {
                         Submit
                     </Button>
                 </Form>
-
+                <br></br>
+                <br></br>
             </div>
         )
     }
