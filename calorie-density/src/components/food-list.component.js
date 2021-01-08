@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import "bootstrap/dist/css/bootstrap.min.css";
 export default class FoodList extends Component {
     render() {
@@ -52,6 +53,10 @@ export default class FoodList extends Component {
                             <Form.Control placeholder="Amount in g" />
                         </Col>
                     </Form.Row>
+                    <p></p>
+                    <Button variant="danger" type="submit">
+                        Submit
+                    </Button>
                 </Form>
 
             </div>
