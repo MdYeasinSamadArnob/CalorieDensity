@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+import "bootstrap/dist/css/bootstrap.min.css";
 export default class FoodList extends Component {
     render() {
         return (
@@ -40,6 +42,18 @@ export default class FoodList extends Component {
                         </tr>
                     </tbody>
                 </table>
+
+                <Form>
+                    <Form.Row>
+                        <Col>
+                            <Form.Control placeholder="Food" />
+                        </Col>
+                        <Col>
+                            <Form.Control placeholder="Amount in g" />
+                        </Col>
+                    </Form.Row>
+                </Form>
+
             </div>
         )
     }
