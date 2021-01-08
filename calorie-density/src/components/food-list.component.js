@@ -5,6 +5,12 @@ export default class FoodList extends Component {
         return (
             <div>
                 <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">03.03.2021</th>
+                            <th scope="col" colspan="3">Morning</th>
+                        </tr>
+                    </thead>
                     <thead>
                         <tr>
                             <th scope="col">Amount(g)</th>
