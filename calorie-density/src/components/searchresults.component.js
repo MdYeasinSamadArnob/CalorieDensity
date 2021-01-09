@@ -7,6 +7,9 @@ const SearchResults = (props) => {
         {r.fields.item_name}
         </td>
         <td>
+        {r.fields.brand_name}
+        </td>   
+        <td>
         {r.fields.nf_calories}
         </td>   
    </tr>
