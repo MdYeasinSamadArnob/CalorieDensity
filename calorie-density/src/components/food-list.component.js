@@ -45,21 +45,7 @@ export default class FoodList extends Component {
                         </tr>
                     </tbody>
                 </table>
-
-                <Form>
-                    <Form.Row>
-                        <Col>
-                        <Search></Search>
-                        </Col>
-                        <Col>
-                            <Form.Control placeholder="Amount in g" />
-                        </Col>
-                    </Form.Row>
-                    <p></p>
-                    <Button variant="danger" type="submit">
-                        Submit
-                    </Button>
-                </Form>
+                <Search></Search>
                 <br></br>
                 <br></br>
             </div>
