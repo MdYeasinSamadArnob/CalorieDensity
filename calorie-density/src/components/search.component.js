@@ -25,7 +25,7 @@ export default class Search extends Component {
     axios.post('https://api.nutritionix.com/v1_1/search', foodPostData)
       .then(({ data }) => {
         this.setState({
-          results: data.hits[0]
+          results: data.hits[0].fields 
         })
         console.log(this.getState)
       })
