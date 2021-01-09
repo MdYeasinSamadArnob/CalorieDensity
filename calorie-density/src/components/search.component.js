@@ -14,13 +14,18 @@ export default class Search extends Component {
     const foodPostData = {
         appKey: process.env.REACT_APP_API_KEY,
         query: this.state.query,
-        appId: process.env.REACT_APP_APP_ID 
+        appId: process.env.REACT_APP_APP_ID,
+        fields: [
+            "item_name",
+            "brand_name",
+            "nf_calories"
+          ],
     }
      
     axios.post('https://api.nutritionix.com/v1_1/search', foodPostData)
       .then(({ data }) => {
         this.setState({
-          results: data 
+          results: data.hits[0]
         })
         console.log(this.getState)
       })
