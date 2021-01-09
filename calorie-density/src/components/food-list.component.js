@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import "bootstrap/dist/css/bootstrap.min.css";
+import Search from "./search.component.js"
+
 export default class FoodList extends Component {
     render() {
         return (
@@ -47,7 +49,7 @@ export default class FoodList extends Component {
                 <Form>
                     <Form.Row>
                         <Col>
-                            <Form.Control placeholder="Food" />
+                        <Search></Search>
                         </Col>
                         <Col>
                             <Form.Control placeholder="Amount in g" />
