@@ -7,13 +7,13 @@ import Search from "./search.component.js"
 export default class FoodList extends Component {
 
 
-    test = () => {
+    test = (nf_calories) => {
         var amount = prompt("Please enter consumed amount in g");
         var table = document.getElementById(this.props.tableId);
         var row = table.insertRow();
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
-        cell2.innerHTML = "NEW CELL1";
+        cell2.innerHTML = nf_calories;
         cell1.innerHTML = amount;
     }
 
