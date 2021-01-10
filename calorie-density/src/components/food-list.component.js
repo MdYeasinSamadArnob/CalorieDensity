@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import ReactDOM from 'react-dom'
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,6 +6,12 @@ import Search from "./search.component.js"
 
 export default class FoodList extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            calDensity: 0
+        };
+    }
 
     test = (nf_calories) => {
         var amount = prompt("Please enter consumed amount in g");
@@ -15,16 +21,19 @@ export default class FoodList extends Component {
         var cell2 = row.insertCell(1);
         cell2.innerHTML = nf_calories;
         cell1.innerHTML = amount;
+        this.setState({ calDensity: this.state.calDensity + 1 })
     }
 
     render() {
+
         return (
             <div>
                 <table class="table" id={this.props.tableId}>
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">{this.props.date}</th>
-                            <th scope="col" colspan="3"> {this.props.daytime}</th>
+                            <th scope="col" colspan="2"> {this.props.daytime}</th>
+                            <th scope="col">Calorie Density: {this.state.calDensity}</th>
                         </tr>
                     </thead>
                     <thead>
