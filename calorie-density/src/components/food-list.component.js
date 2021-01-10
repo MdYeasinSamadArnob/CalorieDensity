@@ -10,7 +10,8 @@ export default class FoodList extends Component {
         super(props);
         this.state = {
             calDensity: 0,
-            consumedGramsOfFood: 0
+            consumedGramsOfFood: 0,
+            consumedCalories: 0
         };
     }
 
@@ -22,8 +23,9 @@ export default class FoodList extends Component {
         var cell2 = row.insertCell(1);
         cell2.innerHTML = nf_calories;
         cell1.innerHTML = amount;
-        this.setState({ calDensity: this.state.calDensity + (nf_calories / 100), 
-            consumedGramsOfFood: Number(this.state.consumedGramsOfFood) + Number(amount)})
+        this.setState({  
+            consumedGramsOfFood: Number(this.state.consumedGramsOfFood) + Number(amount),
+            consumedCalories: Number(this.state.consumedCalories) + Number(nf_calories * (amount / 100))})
     }
 
     render() {
@@ -35,8 +37,9 @@ export default class FoodList extends Component {
                         <tr>
                             <th scope="col">{this.props.date}</th>
                             <th scope="col"> {this.props.daytime}</th>
-                            <th scope="col">Calorie Density: {this.state.calDensity}</th>
+                            <th scope="col">Calorie Density: {this.state.consumedCalories / this.state.consumedGramsOfFood}</th>
                             <th scope="col">Consumed Food: {this.state.consumedGramsOfFood}g</th>
+                            <th scope="col">Consumed Calories: {this.state.consumedCalories} kcal</th>
                         </tr>
                     </thead>
                     <thead>
