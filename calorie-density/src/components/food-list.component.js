@@ -14,8 +14,8 @@ export default class FoodList extends Component {
         var row = table.insertRow();
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
-        cell1.innerHTML = "NEW CELL1";
-        cell2.innerHTML = amount;
+        cell2.innerHTML = "NEW CELL1";
+        cell1.innerHTML = amount;
     }
 
     render() {
