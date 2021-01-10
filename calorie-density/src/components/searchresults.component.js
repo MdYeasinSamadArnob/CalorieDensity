@@ -15,7 +15,7 @@ const SearchResults = (props) => {
                 {r.fields.brand_name}
             </td>
             <td>
-                {r.fields.nf_calories}
+                {r.fields.nf_calories} kcal / {r.fields.nf_serving_weight_grams}g
             </td>
         </tr>
     ))

@@ -18,7 +18,8 @@ export default class Search extends Component {
         fields: [
             "item_name",
             "brand_name",
-            "nf_calories"
+            "nf_calories",
+            "nf_serving_weight_grams"
           ],
     }
      
