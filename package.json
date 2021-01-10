@@ -1,0 +1,19 @@
+{
+  "name": "caloriedensity",
+  "version": "1.0.0",
+  "description": "Calculator for the daily calorie density of your meals (weight loss)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatriciaHeimfarth/CalorieDensity.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatriciaHeimfarth/CalorieDensity/issues"
+  },
+  "homepage": "https://github.com/PatriciaHeimfarth/CalorieDensity#readme"
+}
