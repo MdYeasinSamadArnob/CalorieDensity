@@ -15,14 +15,18 @@ export default class FoodList extends Component {
         };
     }
 
-    test = (nf_calories) => {
+    newUserInput = (nf_calories, itemName) => {
         var amount = prompt("Please enter consumed amount in g");
         var table = document.getElementById(this.props.tableId);
         var row = table.insertRow();
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
+        var cell0 = row.insertCell();
+        var cell1 = row.insertCell();
+        var cell2 = row.insertCell();
+        
+        cell0.innerHTML = amount;
+        cell1.innerHTML = itemName;
         cell2.innerHTML = nf_calories;
-        cell1.innerHTML = amount;
+        
         this.setState({  
             consumedGramsOfFood: Number(this.state.consumedGramsOfFood) + Number(amount),
             consumedCalories: Number(this.state.consumedCalories) + Number(nf_calories * (amount / 100))})
@@ -46,14 +50,14 @@ export default class FoodList extends Component {
                         <tr>
                             <th scope="col">Amount(g)</th>
                             <th scope="col">Item</th>
-                            <th scope="col">kcal/100g</th>
+                            <th scope="col">kcal</th>
                             <th scope="col">Rating</th>
                         </tr>
                     </thead>
                     <tbody>
                     </tbody>
                 </table>
-                <Search func={this.test}></Search>
+                <Search func={this.newUserInput}></Search>
                 <br></br>
                 <br></br>
             </div>
