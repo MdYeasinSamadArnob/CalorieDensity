@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+import ReactDOM from 'react-dom'
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Search from "./search.component.js"
 
@@ -10,7 +9,7 @@ export default class FoodList extends Component {
 
     test = () => {
         var amount = prompt("Please enter consumed amount in g");
-        var table = document.getElementById("evening");
+        var table = document.getElementById(this.props.tableId);
         var row = table.insertRow();
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
