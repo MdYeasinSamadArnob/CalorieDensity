@@ -6,10 +6,12 @@ class App extends Component {
   render() {
     return (
         <div className="container">
-          <h2>Hello World</h2>
-          <FoodList daytime="morning" date="03.03.2020" tableId="morning"></FoodList>
-          <FoodList daytime="noon" date="03.03.2020" tableId="noon"></FoodList>
-          <FoodList daytime="evening" date="05.03.2020" tableId="evening"></FoodList>
+          <h1>Calorie Density</h1>
+          <br></br>
+          <br></br>
+          <FoodList daytime="Breakfast" date={new Date().toISOString().slice(0, 10)} tableId="morning"></FoodList>
+          <FoodList daytime="Lunch" date={new Date().toISOString().slice(0, 10)}  tableId="noon"></FoodList>
+          <FoodList daytime="Dinner" date={new Date().toISOString().slice(0, 10)}  tableId="evening"></FoodList>
         </div>
     );
   }
