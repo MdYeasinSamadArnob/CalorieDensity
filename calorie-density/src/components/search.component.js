@@ -52,7 +52,7 @@ export default class Search extends Component {
           ref={input => this.search = input}
           onChange={this.handleInputChange}
         />
-        <SearchResults results={this.state.results} />
+        <SearchResults results={this.state.results} func={this.props.func} />
       </form>
     )
   }

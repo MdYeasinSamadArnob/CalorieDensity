@@ -2,10 +2,9 @@ import React from 'react'
 
 const SearchResults = (props) => {
     const options = props.results.map(r => (
+
         <tr key={r._id} onClick={() => {
-            var test = prompt("Please enter consumed " + r.fields.item_name
-            + " amount in g!");
-            alert(test);
+           props.func()
         }
         }
         >

@@ -6,10 +6,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Search from "./search.component.js"
 
 export default class FoodList extends Component {
+
+
+    test = () => {
+        var amount = prompt("Please enter consumed amount in g");
+        var table = document.getElementById("evening");
+        var row = table.insertRow();
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = "NEW CELL1";
+        cell2.innerHTML = amount;
+    }
+
     render() {
         return (
             <div>
-                <table class="table">
+                <table class="table" id={this.props.tableId}>
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">{this.props.date}</th>
@@ -45,7 +57,7 @@ export default class FoodList extends Component {
                         </tr>
                     </tbody>
                 </table>
-                <Search></Search>
+                <Search func={this.test}></Search>
                 <br></br>
                 <br></br>
             </div>
