@@ -4,7 +4,7 @@ const SearchResults = (props) => {
     const options = props.results.map(r => (
 
         <tr key={r._id} onClick={() => {
-           props.func(r.fields.nf_calories, r.fields.item_name)
+           props.func(r.fields.nf_calories, r.fields.item_name, r.fields.nf_serving_weight_grams)
         }
         }
         >

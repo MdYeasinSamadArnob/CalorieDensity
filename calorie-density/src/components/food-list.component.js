@@ -15,7 +15,7 @@ export default class FoodList extends Component {
         };
     }
 
-    newUserInput = (nf_calories, itemName) => {
+    newUserInput = (nf_calories, itemName, nf_serving_weight_grams) => {
         var amount = prompt("Please enter consumed amount in g");
         var table = document.getElementById(this.props.tableId);
         var row = table.insertRow();
@@ -25,7 +25,7 @@ export default class FoodList extends Component {
         
         cell0.innerHTML = amount;
         cell1.innerHTML = itemName;
-        cell2.innerHTML = nf_calories;
+        cell2.innerHTML = nf_calories * amount / nf_serving_weight_grams;
         
         this.setState({  
             consumedGramsOfFood: Number(this.state.consumedGramsOfFood) + Number(amount),
