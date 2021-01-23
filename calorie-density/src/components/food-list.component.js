@@ -29,7 +29,7 @@ export default class FoodList extends Component {
         
         this.setState({  
             consumedGramsOfFood: Number(this.state.consumedGramsOfFood) + Number(amount),
-            consumedCalories: Number(this.state.consumedCalories) + Number(nf_calories * (amount / 100))})
+            consumedCalories: Number(this.state.consumedCalories) + Number(nf_calories * amount / nf_serving_weight_grams)})
     }
 
     render() {
